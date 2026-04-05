@@ -98,7 +98,7 @@ section{padding:60px 24px}
 <body>
 
 <div class="hero">
-  <span class="paw-icon">🐾</span>
+  <span class="paw-icon">&#128062;</span>
   <h1>Non sei solo.</h1>
   <h2>Siamo qui con te.</h2>
   <p>Supporto emotivo professionale per i proprietari che affrontano una malattia o il fine vita del proprio pet.</p>
@@ -109,9 +109,9 @@ section{padding:60px 24px}
   <div class="pain-inner">
     <div class="fade-in">
       <p class="section-label">Rainbow Pet</p>
-      <h2 class="section-title">Il tuo dolore e reale.</h2>
+      <h2 class="section-title">Il tuo dolore &#232; reale.</h2>
       <p class="section-sub">E merita di essere riconosciuto.</p>
-      <p style="font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.8;">Perdere un animale e un lutto profondo. La ricerca scientifica lo conferma: l intensita del dolore e paragonabile alla perdita di una persona cara. Eppure spesso questo dolore resta senza ascolto.</p>
+      <p style="font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.8;">Perdere un animale &#232; un lutto profondo. La ricerca scientifica lo conferma: l&#39;intensit&#224; del dolore &#232; paragonabile alla perdita di una persona cara. Eppure spesso questo dolore resta senza ascolto.</p>
     </div>
     <div class="stat-grid fade-in">
       <div class="stat-card"><div class="stat-number">67%</div><div class="stat-desc">degli italiani considera il proprio pet membro della famiglia</div></div>
@@ -124,9 +124,9 @@ section{padding:60px 24px}
   <p class="section-label fade-in">Quello che senti</p>
   <h2 class="section-title fade-in">Ogni emozione ha un nome.</h2>
   <div class="emotions-grid">
-    <div class="emotion-card fade-in"><div class="emotion-title">Senso di colpa</div><div class="emotion-text">Soprattutto dopo l eutanasia. Un peso che quasi tutti i proprietari portano.</div></div>
-    <div class="emotion-card fade-in"><div class="emotion-title">Isolamento</div><div class="emotion-text">Il dolore non riconosciuto dagli altri aggrava la sofferenza. Non sei esagerata.</div></div>
-    <div class="emotion-card fade-in"><div class="emotion-title">Indecisione</div><div class="emotion-text">Valutare la qualita della vita e prendere decisioni difficili e straziante.</div></div>
+    <div class="emotion-card fade-in"><div class="emotion-title">Senso di colpa</div><div class="emotion-text">Soprattutto dopo l&#39;eutanasia. Un peso che quasi tutti i proprietari portano.</div></div>
+    <div class="emotion-card fade-in"><div class="emotion-title">Isolamento</div><div class="emotion-text">Il dolore non riconosciuto dagli altri aggrava la sofferenza. Non stai esagerando.</div></div>
+    <div class="emotion-card fade-in"><div class="emotion-title">Indecisione</div><div class="emotion-text">Valutare la qualit&#224; della vita e prendere decisioni difficili &#232; straziante.</div></div>
     <div class="emotion-card fade-in"><div class="emotion-title">Lutto prolungato</div><div class="emotion-text">A volte il dolore si trasforma in un peso difficile da superare da soli.</div></div>
   </div>
 </section>
@@ -136,10 +136,10 @@ section{padding:60px 24px}
     <p class="section-label fade-in">Come posso aiutarti</p>
     <h2 class="section-title fade-in">Cosa facciamo per te.</h2>
     <div class="services-grid">
-      <div class="service-card fade-in"><div class="service-icon">🎥</div><div class="service-title">Colloqui online</div><div class="service-text">Incontri individuali via video, flessibili e accessibili da casa tua, quando ne hai bisogno.</div></div>
-      <div class="service-card fade-in"><div class="service-icon">🏠</div><div class="service-title">Presenza fisica</div><div class="service-text">Sono al tuo fianco durante l eutanasia, a domicilio o in clinica. Non devi vivere quel momento da sola.</div></div>
-      <div class="service-card fade-in"><div class="service-icon">💜</div><div class="service-title">Percorso personalizzato</div><div class="service-text">Un ciclo di incontri strutturati prima e dopo la perdita, per accompagnarti passo dopo passo.</div></div>
-      <div class="service-card fade-in"><div class="service-icon">🤝</div><div class="service-title">Supporto continuo</div><div class="service-text">Un riferimento stabile nel tempo: non sparisco dopo la perdita. Resto con te nel percorso di elaborazione.</div></div>
+      <div class="service-card fade-in"><div class="service-icon">&#127909;</div><div class="service-title">Colloqui online</div><div class="service-text">Incontri individuali via video, flessibili e accessibili da casa tua, quando ne hai bisogno.</div></div>
+      <div class="service-card fade-in"><div class="service-icon">&#127968;</div><div class="service-title">Presenza fisica</div><div class="service-text">Sono al tuo fianco durante l&#39;eutanasia, a domicilio o in clinica. Non devi affrontare quel momento da solo.</div></div>
+      <div class="service-card fade-in"><div class="service-icon">&#128156;</div><div class="service-title">Percorso personalizzato</div><div class="service-text">Un ciclo di incontri strutturati prima e dopo la perdita, per accompagnarti passo dopo passo.</div></div>
+      <div class="service-card fade-in"><div class="service-icon">&#129309;</div><div class="service-title">Supporto continuo</div><div class="service-text">Un riferimento stabile nel tempo: non sparisco dopo la perdita. Resto con te nel percorso di elaborazione.</div></div>
     </div>
   </div>
 </div>
@@ -154,9 +154,9 @@ section{padding:60px 24px}
     </div>
     <div class="fade-in">
       <p class="section-label">Chi sono</p>
-      <p class="about-text">Una psicologa al tuo fianco, non dall altra parte di una scrivania. Ho scelto di specializzarmi nel lutto da perdita animale perche ho visto quanto questo dolore sia reale e quanto spesso resti senza ascolto.</p>
-      <p class="about-text">Lavoro con proprietari di cani e gatti in ogni fase: quando la malattia avanza, quando arriva il momento della decisione piu difficile, e nel lungo periodo dopo la perdita.</p>
-      <p class="about-text">Il mio approccio e caldo, concreto e senza giudizio. Il tuo dolore e valido, qualunque forma abbia. Integro il supporto psicologico con la realta clinica veterinaria, per accompagnarti con competenza in ogni aspetto di questo percorso.</p>
+      <p class="about-text">Una psicologa al tuo fianco, non dall&#39;altra parte di una scrivania. Ho scelto di specializzarmi nel lutto da perdita animale perch&#233; ho visto quanto questo dolore sia reale e quanto spesso resti senza ascolto.</p>
+      <p class="about-text">Lavoro con proprietari di cani e gatti in ogni fase: quando la malattia avanza, quando arriva il momento della decisione pi&#249; difficile, e nel lungo periodo dopo la perdita.</p>
+      <p class="about-text">Il mio approccio &#232; caldo, concreto e senza giudizio. Il tuo dolore &#232; valido, qualunque forma abbia. Integro il supporto psicologico con la realt&#224; clinica veterinaria, per accompagnarti con competenza in ogni aspetto di questo percorso.</p>
     </div>
   </div>
 </section>
@@ -166,16 +166,16 @@ section{padding:60px 24px}
     <p class="section-label fade-in" style="color:var(--gold)">Ricerca scientifica</p>
     <h2 class="section-title fade-in">Cosa dice la scienza.</h2>
     <div class="science-grid">
-      <div class="science-item fade-in"><div class="science-num">01</div><div class="science-title">Il dolore e reale</div><div class="science-text">La perdita di un animale puo generare lutto complicato e disturbo post-traumatico, con intensita paragonabile alla perdita di una persona cara.</div><div class="science-ref">Cleary et al., 2022 - Death Studies | Luiz Adrian et al., 2009</div></div>
-      <div class="science-item fade-in"><div class="science-num">02</div><div class="science-title">Il silenzio fa male</div><div class="science-text">Il dolore non riconosciuto socialmente (grief disenfranchised) aggrava e prolunga la sofferenza psicologica del proprietario.</div><div class="science-ref">Meehan et al., 2017 | Zhang et al., 2025 - Behavioral Sciences</div></div>
-      <div class="science-item fade-in"><div class="science-num">03</div><div class="science-title">Il supporto riduce il senso di colpa</div><div class="science-text">Il supporto strutturato riduce significativamente il senso di colpa post-eutanasia e previene forme di lutto complicato.</div><div class="science-ref">Packman et al., 2014 - Omega: Journal of Death and Dying</div></div>
-      <div class="science-item fade-in"><div class="science-num">04</div><div class="science-title">Chi chiede aiuto sta meglio</div><div class="science-text">Chi riceve accompagnamento psicologico elabora il lutto in modo piu sano, con minore rischio di depressione e isolamento prolungato.</div><div class="science-ref">Field et al., 2009 - Springer | Eckerd et al., 2016 - Death Studies</div></div>
+      <div class="science-item fade-in"><div class="science-num">01</div><div class="science-title">Il dolore &#232; reale</div><div class="science-text">La perdita di un animale pu&#242; generare lutto complicato e disturbo post-traumatico, con intensit&#224; paragonabile alla perdita di una persona cara.</div><div class="science-ref">Cleary et al., 2022 &#8211; Death Studies | Luiz Adrian et al., 2009</div></div>
+      <div class="science-item fade-in"><div class="science-num">02</div><div class="science-title">Il silenzio fa male</div><div class="science-text">Il dolore non riconosciuto socialmente (grief disenfranchised) aggrava e prolunga la sofferenza psicologica del proprietario.</div><div class="science-ref">Meehan et al., 2017 | Zhang et al., 2025 &#8211; Behavioral Sciences</div></div>
+      <div class="science-item fade-in"><div class="science-num">03</div><div class="science-title">Il supporto riduce il senso di colpa</div><div class="science-text">Il supporto strutturato riduce significativamente il senso di colpa post-eutanasia e previene forme di lutto complicato.</div><div class="science-ref">Packman et al., 2014 &#8211; Omega: Journal of Death and Dying</div></div>
+      <div class="science-item fade-in"><div class="science-num">04</div><div class="science-title">Chi chiede aiuto sta meglio</div><div class="science-text">Chi riceve accompagnamento psicologico elabora il lutto in modo pi&#249; sano, con minore rischio di depressione e isolamento prolungato.</div><div class="science-ref">Field et al., 2009 &#8211; Springer | Eckerd et al., 2016 &#8211; Death Studies</div></div>
     </div>
   </div>
 </div>
 
 <div class="quote-strip">
-  <blockquote>Finche vivro, ricordero ogni animale che ho amato.<cite>- Roger Caras</cite></blockquote>
+  <blockquote>&#171;Finch&#233; vivr&#242;, ricorder&#242; ogni animale che ho amato.&#187;<cite>&#8212; Roger Caras</cite></blockquote>
 </div>
 
 <div class="booking-section" id="prenota">
@@ -184,30 +184,30 @@ section{padding:60px 24px}
     <h2 class="section-title fade-in">Prenota una seduta.</h2>
     <p class="section-sub fade-in">Tre passi semplici.</p>
     <div class="booking-steps">
-      <div class="step fade-in"><div class="step-num">1</div><div class="step-title">Contattami</div><div class="step-text">Un primo contatto senza impegno. Mi racconti di te e del tuo animale, e vediamo insieme se e come posso aiutarti.</div></div>
+      <div class="step fade-in"><div class="step-num">1</div><div class="step-title">Contattami</div><div class="step-text">Un primo contatto senza impegno. Raccontami di te e del tuo animale, e vediamo insieme se e come posso aiutarti.</div></div>
       <div class="step fade-in"><div class="step-num">2</div><div class="step-title">Colloquio gratuito</div><div class="step-text">Una chiamata conoscitiva di 20 minuti, senza costi, per capire di cosa hai bisogno e come possiamo lavorare insieme.</div></div>
-      <div class="step fade-in"><div class="step-num">3</div><div class="step-title">Percorso su misura</div><div class="step-text">Definiamo insieme un percorso personalizzato: online, in presenza, o entrambi nei tempi e nei modi che fanno per te.</div></div>
+      <div class="step fade-in"><div class="step-num">3</div><div class="step-title">Percorso su misura</div><div class="step-text">Definiamo insieme un percorso personalizzato: online, in presenza, o entrambi &#8212; nei tempi e nei modi che fanno per te.</div></div>
     </div>
     <div class="paypal-box fade-in">
       <h3>Pagamento seduta</h3>
       <p>Dopo aver concordato insieme la seduta, puoi effettuare il pagamento in modo sicuro tramite PayPal.</p>
       <a href="https://www.paypal.com/paypalme/melaniastricchiolo" target="_blank" rel="noopener" class="paypal-btn">
-        <span style="font-size:22px;">💙</span> Paga con PayPal
+        <span style="font-size:22px;">&#128153;</span> Paga con PayPal
       </a>
-      <p class="paypal-note">Pagamento sicuro. Puoi pagare anche senza un account PayPal, tramite carta di credito o debito.</p>
+      <p class="paypal-note">&#128274; Pagamento sicuro. Puoi pagare anche senza un account PayPal, tramite carta di credito o debito.</p>
     </div>
   </div>
 </div>
 
 <div class="contact-bar">
-  <h3>L amore resta.</h3>
+  <h3>L&#39;amore resta.</h3>
   <div class="contact-links">
-    <a href="tel:+393496283829" class="contact-link"><span class="contact-icon">📞</span>+39 349 628 3829</a>
-    <a href="mailto:melaniastricchiolo@gmail.com2" class="contact-link"><span class="contact-icon">✉️</span>melaniastricchiolo@gmail.com</a>
+    <a href="tel:+393496283829" class="contact-link"><span class="contact-icon">&#128222;</span>+39 349 628 3829</a>
+    <a href="mailto:melaniastricchiolo@gmail.com2" class="contact-link"><span class="contact-icon">&#9993;&#65039;</span>melaniastricchiolo@gmail.com</a>
   </div>
 </div>
 
-<footer><p>2025 Rainbow Pet - Dott.ssa Melania Stricchiolo - Pet Loss Coach</p></footer>
+<footer><p>&#169; 2025 Rainbow Pet &#8211; Dott.ssa Melania Stricchiolo &#8211; Pet Loss Coach</p></footer>
 
 <script>
 const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});
