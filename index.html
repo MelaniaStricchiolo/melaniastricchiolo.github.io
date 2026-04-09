@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Rainbow Pet – Supporto emotivo per la perdita del tuo animale | Dott.ssa Melania Stricchiolo</title>
+<meta name="description" content="Rainbow Pet offre supporto psicologico professionale per chi affronta la malattia o la perdita del proprio animale domestico. Colloqui online, presenza durante l'eutanasia, percorsi personalizzati. Dott.ssa Melania Stricchiolo, Pet Loss Coach.">
+<meta name="keywords" content="supporto perdita animale, lutto animale domestico, pet loss, eutanasia animali, psicologa animali, supporto emotivo cane gatto, lutto pet, Rainbow Pet, Melania Stricchiolo, pet loss coach">
+<meta name="author" content="Melania Stricchiolo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rainbowpet.it/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rainbowpet.it/">
+<meta property="og:title" content="Rainbow Pet – Supporto emotivo per la perdita del tuo animale">
+<meta property="og:description" content="Supporto psicologico professionale per chi affronta la malattia o la perdita del proprio animale. Colloqui online, presenza durante l'eutanasia, percorsi personalizzati.">
+<meta property="og:locale" content="it_IT">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rainbow Pet – Supporto emotivo per la perdita del tuo animale">
+<meta name="twitter:description" content="Supporto psicologico professionale per chi affronta la malattia o la perdita del proprio animale domestico.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3d2459;--plum-mid:#4e2f6e;--plum-light:#6b4a8e;--gold:#b8902a;--gold-light:#d4a83a;--teal:#2a7a72;--teal-mid:#1f5e58}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#ffffff!important;color-scheme:light!important}
+body{font-family:'Jost',sans-serif;color:#2a1a3a;overflow-x:hidden}
+
+.hero{min-height:100vh;background-color:#3d2459!important;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 32px;position:relative;overflow:hidden}
+.hero::before{content:’’;position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(107,74,142,0.25);right:-150px;top:-150px;pointer-events:none}
+.hero::after{content:’’;position:absolute;width:350px;height:350px;border-radius:50%;background:rgba(107,74,142,0.18);left:-100px;bottom:-100px;pointer-events:none}
+
+.rainbow-wrap{position:relative;z-index:2;margin-bottom:28px}
+.logo-text{position:relative;z-index:2;margin-bottom:8px}
+.logo-text span{font-family:‘Cormorant Garamond’,serif;font-size:clamp(48px,9vw,100px);font-weight:600;color:#ffffff!important;letter-spacing:-0.02em;line-height:1}
+.logo-text .rainbow-word{background:linear-gradient(90deg,#e8632a,#e8b84b,#4ec94e,#2a8ae8,#9b2ae8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.hero h1{font-family:‘Cormorant Garamond’,serif;font-size:clamp(44px,7vw,84px);font-weight:600;color:#ffffff!important;line-height:1;margin-bottom:16px;position:relative;z-index:2}
+.hero h2{font-family:‘Cormorant Garamond’,serif;font-size:clamp(20px,3vw,34px);font-weight:300;font-style:italic;color:#d4a83a!important;margin-bottom:28px;position:relative;z-index:2}
+.hero>p{max-width:520px;font-size:15px;font-weight:300;color:rgba(255,255,255,0.85)!important;line-height:1.7;margin-bottom:40px;position:relative;z-index:2}
+
+.hero-cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2;width:100%;max-width:820px}
+.hero-card{flex:1;min-width:260px;max-width:360px;border-radius:10px;padding:32px 28px;text-align:left;text-decoration:none;display:block;transition:transform 0.25s,box-shadow 0.25s}
+.hero-card:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,0.3)}
+.hero-card.prop{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.18)}
+.hero-card.vets{background:rgba(42,122,114,0.22);border:1px solid rgba(58,157,147,0.4)}
+
+.hc-tag{font-family:‘Jost’,sans-serif;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px}
+.hero-card.prop .hc-tag{color:#e8b84b}
+.hero-card.vets .hc-tag{color:#7ee8df}
+.hc-title{font-family:‘Cormorant Garamond’,serif;font-size:clamp(22px,3vw,28px);font-weight:600;color:#ffffff!important;line-height:1.2;margin-bottom:12px}
+.hc-text{font-size:13px;font-weight:300;color:rgba(255,255,255,0.72)!important;line-height:1.65;margin-bottom:22px}
+.hc-btn{display:inline-block;font-family:‘Jost’,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:11px 24px;border-radius:2px}
+.hero-card.prop .hc-btn{background-color:#b8902a!important;color:#ffffff!important}
+.hero-card.vets .hc-btn{background-color:#2a7a72!important;color:#ffffff!important}
+
+.footer-strip{background-color:#4e2f6e!important;padding:20px 32px;text-align:center}
+.footer-strip p{font-size:12px;color:rgba(255,255,255,0.6)!important;font-weight:300}
+
+@media(max-width:640px){
+.hero-cards{flex-direction:column;align-items:center}
+.hero-card{max-width:100%}}
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+  <div class="rainbow-wrap">
+    <svg width="220" height="120" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 110 Q10 10 110 10 Q210 10 210 110" stroke="#e8632a" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M28 110 Q28 28 110 28 Q192 28 192 110" stroke="#e8b84b" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M46 110 Q46 46 110 46 Q174 46 174 110" stroke="#4ec94e" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M64 110 Q64 64 110 64 Q156 64 156 110" stroke="#2a8ae8" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M82 110 Q82 82 110 82 Q138 82 138 110" stroke="#9b59e8" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <text x="98" y="108" font-size="22" fill="white" opacity="0.9">&#128062;</text>
+    </svg>
+  </div>
+
+  <div class="logo-text">
+    <span class="rainbow-word">Rainbow</span><span> Pet</span>
+  </div>
+
+  <p>Supporto emotivo professionale per chi affronta una malattia o il fine vita del proprio pet &mdash; e per chi di quegli animali si prende cura ogni giorno.</p>
+  <h1>Non sei solo.</h1>
+  <h2>Sono qui con te.</h2>
+
+  <div class="hero-cards">
+    <a href="proprietari.html" class="hero-card prop">
+      <div class="hc-tag">Per i proprietari</div>
+      <div class="hc-title">Stai soffrendo per il tuo pet?</div>
+      <div class="hc-text">Colloqui individuali, presenza durante l&rsquo;eutanasia, percorsi strutturati di elaborazione del lutto.</div>
+      <span class="hc-btn">Scopri il supporto &rarr;</span>
+    </a>
+    <a href="veterinari.html" class="hero-card vets">
+      <div class="hc-tag">Per i medici veterinari</div>
+      <div class="hc-title">Mi prendo cura di chi cura.</div>
+      <div class="hc-text">Sessioni di gruppo, supporto individuale e formazione del team per contrastare burnout e compassion fatigue.</div>
+      <span class="hc-btn">Scopri il programma &rarr;</span>
+    </a>
+  </div>
+</div>
+
+<div class="footer-strip">
+  <p>&copy; 2025 Rainbow Pet &ndash; Dott.ssa Melania Stricchiolo &ndash; Pet Loss Coach</p>
+</div>
+
+</body>
+</html>
