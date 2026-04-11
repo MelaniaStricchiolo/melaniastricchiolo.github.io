@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Rainbow Pet - Dott.ssa Melania Stricchiolo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#ffffff;color-scheme:light}
+body{font-family:'Jost',sans-serif;color:#2a1a3a;overflow-x:hidden}
+
+/* HERO */
+.hero{min-height:100vh;background:#3d2459;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 32px;position:relative;overflow:hidden}
+.hero::before{content:’’;position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(107,74,142,0.25);right:-150px;top:-150px}
+.hero::after{content:’’;position:absolute;width:350px;height:350px;border-radius:50%;background:rgba(107,74,142,0.18);left:-100px;bottom:-100px}
+.paw{font-size:48px;margin-bottom:24px;display:block;position:relative;z-index:2}
+.logo{font-family:‘Cormorant Garamond’,serif;font-size:clamp(48px,9vw,96px);font-weight:600;line-height:1;position:relative;z-index:2;margin-bottom:24px}
+.logo-r{color:#e8632a}
+.logo-w{color:#ffffff}
+.hero-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.7;max-width:520px;margin-bottom:36px;position:relative;z-index:2}
+.hero-h1{font-family:‘Cormorant Garamond’,serif;font-size:clamp(44px,7vw,84px);font-weight:600;color:#ffffff;line-height:1;margin-bottom:16px;position:relative;z-index:2}
+.hero-h2{font-family:‘Cormorant Garamond’,serif;font-size:clamp(20px,3vw,34px);font-weight:300;font-style:italic;color:#d4a83a;margin-bottom:36px;position:relative;z-index:2}
+.btn-gold{display:inline-block;background:#b8902a;color:#ffffff;font-family:‘Jost’,sans-serif;font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;padding:16px 40px;border-radius:2px;position:relative;z-index:2}
+.hero-garden{display:block;margin-top:16px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.65);text-decoration:none;position:relative;z-index:2;letter-spacing:0.06em}
+
+/* SEZIONI */
+.sez-bianca{background:#ffffff;padding:80px 32px}
+.sez-crema{background:#fdf9f3;padding:80px 32px}
+.sez-pallida{background:#f5f0fb;padding:80px 32px}
+.sez-viola{background:#3d2459;padding:80px 32px}
+.sez-senape{background:#fdf3dc;padding:80px 32px}
+.sez-oro{background:#b8902a;padding:48px 32px;text-align:center}
+.sez-viola-mid{background:#4e2f6e;padding:24px 32px;text-align:center}
+
+.inner{max-width:1000px;margin:0 auto}
+.inner-c{max-width:900px;margin:0 auto;text-align:center}
+
+.lbl{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#b8902a;margin-bottom:14px}
+.lbl-w{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#d4a83a;margin-bottom:14px}
+.lbl-s{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#c8912a;margin-bottom:14px}
+.titolo{font-family:‘Cormorant Garamond’,serif;font-size:clamp(30px,5vw,50px);font-weight:600;color:#3d2459;line-height:1.1;margin-bottom:18px}
+.titolo-w{font-family:‘Cormorant Garamond’,serif;font-size:clamp(30px,5vw,50px);font-weight:600;color:#ffffff;line-height:1.1;margin-bottom:18px}
+.sottotitolo{font-family:‘Cormorant Garamond’,serif;font-size:19px;font-style:italic;color:#6b4a8e;margin-bottom:36px}
+.testo{font-size:15px;font-weight:300;color:#4a3a5a;line-height:1.8;margin-bottom:16px}
+.testo-w{font-size:15px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.8;margin-bottom:16px}
+
+/* DOLORE */
+.griglia-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{background:#3d2459;border-radius:8px;padding:28px 20px;text-align:center}
+.stat.oro{background:#b8902a}
+.stat-n{font-family:‘Cormorant Garamond’,serif;font-size:48px;font-weight:600;color:#ffffff;line-height:1;margin-bottom:6px}
+.stat-d{font-size:12px;font-weight:300;color:rgba(255,255,255,0.82);line-height:1.5}
+
+/* EMOZIONI */
+.em-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.em{border-left:4px solid #c8912a;padding:20px;background:#ffffff;border-radius:0 8px 8px 0;box-shadow:0 2px 12px rgba(61,36,89,0.08)}
+.em-t{font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600;color:#3d2459;margin-bottom:6px}
+.em-d{font-size:12px;font-weight:300;color:#6a5a7a;line-height:1.5}
+
+/* SERVIZI */
+.srv-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.srv{background:#ffffff;border-radius:8px;padding:28px 22px;border-top:3px solid #3d2459;box-shadow:0 2px 12px rgba(61,36,89,0.08)}
+.srv-i{font-size:26px;margin-bottom:12px}
+.srv-t{font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600;color:#3d2459;margin-bottom:8px}
+.srv-d{font-size:13px;font-weight:300;color:#4a3a5a;line-height:1.6}
+
+/* CHI SONO */
+.chi-grid{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start}
+.nome{font-family:‘Cormorant Garamond’,serif;font-size:30px;font-weight:600;color:#3d2459;line-height:1.2;margin-bottom:6px}
+.ruolo{font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#b8902a}
+.linea{width:40px;height:2px;background:#b8902a;margin:14px 0}
+
+/* SCIENZA */
+.sci-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:32px}
+.sci{background:#4e2f6e;padding:32px 28px}
+.sci-n{font-family:‘Cormorant Garamond’,serif;font-size:48px;font-weight:300;color:#b8902a;opacity:0.6;line-height:1;margin-bottom:6px}
+.sci-t{font-family:‘Cormorant Garamond’,serif;font-size:19px;font-weight:600;color:#ffffff;margin-bottom:8px}
+.sci-d{font-size:12px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:6px}
+.sci-r{font-size:10px;color:rgba(255,255,255,0.38);font-style:italic}
+
+/* GIARDINO */
+.giardino-icone{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+.g-ico{background:#ffffff;border-radius:12px;padding:20px 12px;text-align:center;box-shadow:0 2px 12px rgba(61,36,89,0.08)}
+.g-ico-e{font-size:36px;margin-bottom:6px}
+.g-ico-t{font-size:11px;color:#6a5a7a;font-weight:300}
+
+/* PRENOTA */
+.passi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px 0;text-align:left}
+.passo-n{width:44px;height:44px;background:#3d2459;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600;color:#b8902a;margin-bottom:12px}
+.passo-t{font-family:‘Cormorant Garamond’,serif;font-size:18px;font-weight:600;color:#3d2459;margin-bottom:6px}
+.passo-d{font-size:12px;font-weight:300;color:#4a3a5a;line-height:1.6}
+
+.pp-box{background:#ffffff;border:2px solid #f5f0fb;border-radius:12px;padding:32px;margin-top:24px}
+.pp-t{font-family:‘Cormorant Garamond’,serif;font-size:22px;font-weight:600;color:#3d2459;margin-bottom:10px}
+.pp-d{font-size:13px;color:#6a5a7a;margin-bottom:20px;line-height:1.6;font-weight:300}
+.pp-btn{display:inline-flex;align-items:center;gap:10px;background:#003087;color:#ffffff;font-family:‘Jost’,sans-serif;font-size:14px;font-weight:500;text-decoration:none;padding:14px 28px;border-radius:6px}
+.pp-nota{margin-top:10px;font-size:11px;color:#6a5a7a}
+
+/* CONTATTI */
+.c-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.c-link{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.88);text-decoration:none;font-size:15px;font-weight:300}
+.c-ico{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:16px}
+
+/* FADE IN */
+
+/* RESPONSIVE */
+@media(max-width:700px){
+.griglia-2,.chi-grid{grid-template-columns:1fr;gap:28px}
+.stat-grid,.em-grid,.srv-grid,.sci-grid,.passi,.giardino-icone{grid-template-columns:1fr 1fr}
+.sez-bianca,.sez-crema,.sez-pallida,.sez-viola,.sez-senape{padding:56px 24px}
+}
+@media(max-width:400px){
+.em-grid,.srv-grid,.sci-grid,.giardino-icone{grid-template-columns:1fr}
+.passi{grid-template-columns:1fr}
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<div class="hero">
+  <span class="paw">&#128062;</span>
+  <svg style="position:relative;z-index:2;margin-bottom:20px" width="240" height="130" viewBox="0 0 240 130" fill="none">
+    <path d="M10 124 Q10 10 120 10 Q230 10 230 124" stroke="#e8632a" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M28 124 Q28 28 120 28 Q212 28 212 124" stroke="#e8b84b" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M46 124 Q46 46 120 46 Q194 46 194 124" stroke="#4ec94e" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M64 124 Q64 64 120 64 Q176 64 176 124" stroke="#2a8ae8" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M82 124 Q82 82 120 82 Q158 82 158 124" stroke="#9b59e8" stroke-width="16" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="logo"><span class="logo-r">Rainbow</span><span class="logo-w"> Pet</span></div>
+  <p class="hero-desc">Supporto emotivo professionale per chi affronta una malattia o il fine vita del proprio pet.</p>
+  <h1 class="hero-h1">Non sei solo.</h1>
+  <h2 class="hero-h2">Sono qui con te.</h2>
+  <a href="contatto.html" class="btn-gold">Prenota un incontro</a>
+  <a href="giardino.html" class="hero-garden">&#127795; Il Giardino dei Ricordi &#8594;</a>
+</div>
+
+<!-- PROPRIETARI E VETERINARI -->
+
+<div style="background:#2a7a7a;padding:56px 28px;text-align:center">
+  <p style="font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:14px">Sei nel posto giusto</p>
+  <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(30px,5vw,46px);font-weight:600;font-style:italic;color:#ffffff;margin-bottom:12px">Per chi &egrave; questo spazio?</h2>
+  <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.7;max-width:400px;margin:0 auto 36px">Ho creato percorsi dedicati sia per i proprietari di animali che per i professionisti veterinari.</p>
+  <style>
+    .btn-pv {
+      display:block;max-width:360px;margin:0 auto;text-decoration:none;
+      border-radius:16px;padding:20px 32px;text-align:center;
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-pv:active { transform:scale(0.97); }
+    .btn-pv-title {
+      font-family:'Cormorant Garamond',Georgia,serif;
+      font-size:22px;font-weight:600;line-height:1.2;margin-bottom:4px;
+    }
+    .btn-pv-sub { font-size:12px;font-weight:300;opacity:0.8; }
+    .btn-pv-arrow { font-size:18px;margin-top:8px;display:block; }
+  </style>
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:360px;margin:0 auto">
+    <a href="proprietari.html" class="btn-pv" style="background:#ffffff;box-shadow:0 8px 32px rgba(0,0,0,0.18)">
+      <div class="btn-pv-title" style="color:#3d2459">&#128062; Sono un proprietario</div>
+      <div class="btn-pv-sub" style="color:#6a5a7a">Supporto emotivo per me e il mio animale</div>
+      <span class="btn-pv-arrow" style="color:#b8902a">&darr;</span>
+    </a>
+    <a href="veterinari.html" class="btn-pv" style="background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.35)">
+      <div class="btn-pv-title" style="color:#ffffff">&#9829; Sono un veterinario</div>
+      <div class="btn-pv-sub" style="color:rgba(255,255,255,0.8)">Collaborazione e supporto professionale</div>
+      <span class="btn-pv-arrow" style="color:#d4a83a">&darr;</span>
+    </a>
+  </div>
+</div>
+
+<!-- IL DOLORE -->
+
+<div style="background:#ffffff;padding:40px 28px;"><div style="max-width:960px;margin:0 auto"><p style="font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#b8902a;margin-bottom:12px">Rainbow Pet</p>
+    <h2 class="titolo">Il tuo dolore &#232; reale.</h2>
+    <p class="sottotitolo">E merita di essere riconosciuto.</p>
+    <p class="testo">Perdere un animale &#232; un lutto profondo. La ricerca scientifica lo conferma: l&#39;intensit&#224; del dolore &#232; paragonabile alla perdita di una persona cara. Eppure spesso questo dolore resta senza ascolto.</p>
+</div></div>
+
+<!-- EMOZIONI -->
+
+<div class="sez-senape">
+  <div class="inner">
+    <p class="lbl-s">Quello che senti</p>
+    <h2 class="titolo">Ogni emozione ha un nome.</h2>
+    <div class="em-grid">
+      <div class="em"><div class="em-t">Senso di colpa</div><div class="em-d">Soprattutto dopo l&#39;eutanasia. Un peso che quasi tutti i proprietari portano.</div></div>
+      <div class="em"><div class="em-t">Isolamento</div><div class="em-d">Il dolore non riconosciuto dagli altri aggrava la sofferenza. Non stai esagerando.</div></div>
+      <div class="em"><div class="em-t">Indecisione</div><div class="em-d">Valutare la qualit&#224; della vita e prendere decisioni difficili &#232; straziante.</div></div>
+      <div class="em"><div class="em-t">Lutto prolungato</div><div class="em-d">A volte il dolore si trasforma in un peso difficile da superare da soli.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIZI -->
+
+<div class="sez-pallida">
+  <div class="inner">
+    <p class="lbl">Come posso aiutarti</p>
+    <h2 class="titolo">Cosa faccio per te.</h2>
+    <div class="srv-grid">
+      <div class="srv"><div class="srv-i">&#127909;</div><div class="srv-t">Colloqui online</div><div class="srv-d">Incontri individuali via video, flessibili e accessibili da casa tua, quando ne hai bisogno.</div></div>
+      <div class="srv"><div class="srv-i">&#127968;</div><div class="srv-t">Presenza fisica</div><div class="srv-d">Sono al tuo fianco durante l&#39;eutanasia, a domicilio o in clinica. Non devi affrontare quel momento da solo.</div></div>
+      <div class="srv"><div class="srv-i">&#128156;</div><div class="srv-t">Percorso personalizzato</div><div class="srv-d">Un ciclo di incontri strutturati prima e dopo la perdita, per accompagnarti passo dopo passo.</div></div>
+      <div class="srv"><div class="srv-i">&#129309;</div><div class="srv-t">Supporto continuo</div><div class="srv-d">Non sparisco dopo la perdita. Resto con te nel percorso di elaborazione, come riferimento stabile nel tempo.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHI SONO -->
+
+<div class="sez-bianca">
+  <div class="inner">
+    <div class="chi-grid">
+      <div>
+        <div class="nome">Dott.ssa Melania Stricchiolo</div>
+        <div class="ruolo">Pet Loss Coach</div>
+        <div class="linea"></div>
+        <a href="contatto.html" class="btn-gold" style="font-size:12px;padding:12px 22px">Scrivimi</a>
+      </div>
+      <div>
+        <p class="lbl">Chi sono</p>
+        <p class="testo">Una psicologa al tuo fianco, non dall&#39;altra parte di una scrivania. Ho scelto di specializzarmi nel lutto da perdita animale perch&#233; ho visto quanto questo dolore sia reale e quanto spesso resti senza ascolto.</p>
+        <p class="testo">Lavoro con proprietari di cani e gatti in ogni fase: quando la malattia avanza, quando arriva il momento della decisione pi&#249; difficile, e nel lungo periodo dopo la perdita.</p>
+        <p class="testo">Il mio approccio &#232; caldo, concreto e senza giudizio. Il tuo dolore &#232; valido, qualunque forma abbia.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCIENZA -->
+
+<div class="sez-viola">
+  <div class="inner">
+    <p class="lbl-w">Ricerca scientifica</p>
+    <h2 class="titolo-w">Cosa dice la scienza.</h2>
+    <div class="sci-grid">
+      <div class="sci"><div class="sci-n">01</div><div class="sci-t">Il dolore &#232; reale</div><div class="sci-d">La perdita di un animale pu&#242; generare lutto complicato e disturbo post-traumatico, con intensit&#224; paragonabile alla perdita di una persona cara.</div><div class="sci-r">Cleary et al., 2022 — Death Studies</div></div>
+      <div class="sci"><div class="sci-n">02</div><div class="sci-t">Il silenzio fa male</div><div class="sci-d">Il dolore non riconosciuto socialmente aggrava e prolunga la sofferenza psicologica del proprietario.</div><div class="sci-r">Meehan et al., 2017 — Behavioral Sciences</div></div>
+      <div class="sci"><div class="sci-n">03</div><div class="sci-t">Il supporto riduce il senso di colpa</div><div class="sci-d">Il supporto strutturato riduce significativamente il senso di colpa post-eutanasia e previene forme di lutto complicato.</div><div class="sci-r">Packman et al., 2014 — Omega</div></div>
+      <div class="sci"><div class="sci-n">04</div><div class="sci-t">Chi chiede aiuto sta meglio</div><div class="sci-d">Chi riceve accompagnamento psicologico elabora il lutto in modo pi&#249; sano, con minore rischio di depressione.</div><div class="sci-r">Field et al., 2009 — Springer</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CITAZIONE -->
+
+<div class="sez-oro">
+  <blockquote style="font-family:'Cormorant Garamond',serif;font-size:clamp(18px,3vw,26px);font-style:italic;color:#ffffff;max-width:600px;margin:0 auto;line-height:1.5">
+    &#171;Finch&#233; vivr&#242;, ricorder&#242; ogni animale che ho amato.&#187;
+    <cite style="display:block;font-family:'Jost',sans-serif;font-style:normal;font-size:12px;color:rgba(255,255,255,0.75);margin-top:12px;letter-spacing:0.12em;text-transform:uppercase">&#8212; Roger Caras</cite>
+  </blockquote>
+</div>
+
+<!-- GIARDINO -->
+
+<div class="sez-pallida">
+  <div class="inner-c">
+    <p class="lbl">&#127795; Rainbow Pet</p>
+    <h2 class="titolo">Il Giardino dei Ricordi</h2>
+    <p class="sottotitolo">Un luogo dove l&#39;amore continua a vivere.</p>
+    <p class="testo" style="max-width:540px;margin:0 auto 28px">Hai perso un animale che amavi? Nel Giardino dei Ricordi puoi condividere la sua storia, la sua foto e una frase che lo rappresenta. Perch&#233; ogni amore merita di essere ricordato.</p>
+
+```
+<a href="giardino.html" class="btn-gold">&#127795; Visita il Giardino dei Ricordi</a>
+```
+
+  </div>
+</div>
+
+<!-- PRENOTA -->
+
+<div class="sez-crema" id="prenota">
+  <div class="inner-c">
+    <p class="lbl">Inizia il percorso</p>
+    <h2 class="titolo">Prenota un incontro.</h2>
+    <p class="sottotitolo">Tre passi semplici.</p>
+    <div class="passi">
+      <div><div class="passo-n">1</div><div class="passo-t">Contattami</div><div class="passo-d">Un primo contatto senza impegno. Raccontami di te e del tuo animale.</div></div>
+      <div><div class="passo-n">2</div><div class="passo-t">Colloquio gratuito</div><div class="passo-d">Una chiamata conoscitiva di 20 minuti, senza costi, per capire come posso aiutarti.</div></div>
+      <div><div class="passo-n">3</div><div class="passo-t">Percorso su misura</div><div class="passo-d">Definiamo insieme un percorso personalizzato, online o in presenza.</div></div>
+    </div>
+    <div class="pp-box">
+      <div class="pp-t">&#128153; Pagamento incontro</div>
+      <p class="pp-d">Dopo aver concordato l&#39;incontro, puoi effettuare il pagamento in modo sicuro tramite PayPal — anche con carta di credito o debito, senza account.</p>
+      <a href="https://www.paypal.com/paypalme/melaniastricchiolo" target="_blank" rel="noopener" class="pp-btn">
+        <span style="font-size:20px">&#128153;</span> Paga con PayPal
+      </a>
+      <p class="pp-nota">&#128274; Pagamento sicuro &#183; Carta di credito, debito o conto PayPal</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTATTI -->
+
+<div class="sez-viola" style="padding:60px 32px;text-align:center">
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;font-style:italic;color:#ffffff;margin-bottom:32px">L&#39;amore resta.</h3>
+  <div class="c-links">
+    <a href="tel:+393496283829" class="c-link"><span class="c-ico">&#128222;</span>+39 349 628 3829</a>
+    <a href="/cdn-cgi/l/email-protection#205241494e424f575045544954414c494160474d41494c0e434f4d" class="c-link"><span class="c-ico">&#9993;</span><span class="__cf_email__" data-cfemail="a1d3c0c8cfc3ced6d1c4d5c8d5c0cdc8c0e1c6ccc0c8cd8fc2cecc">rainbowpetitalia@gmail.com</span></a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+<div class="sez-viola-mid">
+  <p style="font-size:12px;color:rgba(255,255,255,0.5)">&#169; 2025 Rainbow Pet &#8211; Dott.ssa Melania Stricchiolo &#8211; Pet Loss Coach</p>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.m
