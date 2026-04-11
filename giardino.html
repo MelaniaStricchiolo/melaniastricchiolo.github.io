@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Il Giardino dei Ricordi – Rainbow Pet</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#3d2459;--plum-mid:#4e2f6e;--plum-light:#6b4a8e;--plum-pale:#f5f0fb;
+  --gold:#b8902a;--gold-light:#d4a83a;--cream:#fdf9f3;--mustard:#fdf3dc;
+  --text-dark:#2a1a3a;--text-mid:#4a3a5a;--text-soft:#6a5a7a;--white:#ffffff;
+  --teal:#2a7a7a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#ffffff!important;color-scheme:light!important}
+body{font-family:'Jost',sans-serif;color:var(--text-dark);overflow-x:hidden}
+
+/* ── NAVBAR ── */
+.navbar{
+background-color:#3d2459!important;
+padding:0 16px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:60px;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 20px rgba(0,0,0,0.3);
+}
+.navbar-logo{
+font-family:‘Cormorant Garamond’,serif;
+font-size:20px;
+font-weight:600;
+color:#ffffff;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:8px;
+}
+.navbar-logo .r{color:#e8632a}
+
+.navbar-links{display:flex;align-items:center;gap:3px;flex-wrap:nowrap;}
+
+.nav-link{
+color:rgba(255,255,255,0.75);
+text-decoration:none;
+font-size:12px;
+font-weight:400;
+letter-spacing:0.06em;
+padding:7px 14px;
+border-radius:20px;
+border:1px solid transparent;
+transition:all 0.2s;
+white-space:nowrap;
+}
+.nav-link:hover{color:#ffffff;border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.08)}
+.nav-link.active{color:#ffffff;background:rgba(232,184,75,0.2);border-color:rgba(232,184,75,0.4)}
+.nav-link.cta{background:#e8632a;border-color:#e8632a;color:#ffffff}
+.nav-link.cta:hover{background:#c8512a;border-color:#c8512a}
+
+/* ── RAINBOW LINE ── */
+.rainbow-line{height:5px;background:linear-gradient(90deg,#e8632a,#e8b84b,#4ec94e,#2a8ae8,#9b59e8);width:100%}
+
+/* ── HEADER ── */
+.header{background-color:#3d2459!important;padding:56px 32px 48px;text-align:center;position:relative;overflow:hidden}
+.header::before{content:’’;position:absolute;width:400px;height:400px;border-radius:50%;background:rgba(107,74,142,0.2);right:-100px;top:-150px}
+.header::after{content:’’;position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(42,122,122,0.1);left:-80px;bottom:-100px}
+
+.header-icon{font-size:56px;margin-bottom:16px;position:relative;z-index:1;display:block;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.header-title{
+font-family:‘Cormorant Garamond’,serif;
+font-size:clamp(36px,7vw,60px);
+font-weight:600;
+color:#ffffff;
+line-height:1.1;
+margin-bottom:12px;
+position:relative;z-index:1;
+}
+.header-title .accent{color:#e8b84b}
+.header-sub{
+font-size:15px;font-weight:300;
+color:rgba(255,255,255,0.75);
+line-height:1.7;max-width:520px;
+margin:0 auto;position:relative;z-index:1;
+}
+
+/* ── INTRO ── */
+.intro-wrap{background:#ffffff!important;padding:48px 32px;text-align:center;max-width:680px;margin:0 auto}
+.intro-title{font-family:‘Cormorant Garamond’,serif;font-size:26px;font-weight:600;color:var(–plum);margin-bottom:12px}
+.intro-text{font-size:14px;font-weight:300;color:var(–text-mid);line-height:1.9}
+
+/* ── FORM ── */
+.form-wrap{background-color:#f5f0fb!important;padding:0}
+.form-inner{max-width:680px;margin:0 auto;padding:48px 32px}
+.form-title{font-family:‘Cormorant Garamond’,serif;font-size:24px;font-weight:600;color:var(–plum);margin-bottom:6px}
+.form-sub{font-size:13px;color:var(–text-soft);margin-bottom:32px;font-weight:300}
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(–gold);margin-bottom:8px}
+.form-input,.form-textarea,.form-select{width:100%;background:#ffffff;border:2px solid rgba(61,36,89,0.12);border-radius:8px;padding:12px 16px;font-family:‘Jost’,sans-serif;font-size:14px;color:var(–text-dark);outline:none;transition:border-color 0.2s}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(–plum)}
+.form-textarea{min-height:100px;resize:vertical}
+.form-hint{font-size:11px;color:var(–text-soft);margin-top:5px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+.upload-area{border:2px dashed rgba(61,36,89,0.25);border-radius:8px;padding:28px;text-align:center;background:#ffffff;cursor:pointer;transition:border-color 0.2s}
+.upload-area:hover{border-color:var(–plum)}
+.upload-icon{font-size:32px;margin-bottom:8px}
+.upload-text{font-size:13px;color:var(–text-soft);font-weight:300;line-height:1.5}
+.upload-text strong{color:var(–plum)}
+#foto-preview{width:100%;max-height:220px;object-fit:cover;border-radius:8px;margin-top:12px;display:none}
+
+.form-btn{width:100%;background-color:#3d2459!important;color:#ffffff!important;font-family:‘Jost’,sans-serif;font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;border:none;padding:16px;border-radius:8px;cursor:pointer;margin-top:8px;transition:background 0.2s}
+.form-btn:hover{background-color:#4e2f6e!important}
+.form-note{font-size:11px;color:var(–text-soft);text-align:center;margin-top:12px;line-height:1.6}
+
+.success-msg{display:none;background:#ffffff;border:2px solid var(–gold);border-radius:8px;padding:28px;text-align:center;margin-top:16px}
+.success-msg h3{font-family:‘Cormorant Garamond’,serif;font-size:22px;color:var(–plum);margin-bottom:8px}
+.success-msg p{font-size:13px;color:var(–text-soft)}
+
+/* ── CARDS ── */
+.cards-wrap{background:#ffffff!important;padding:0}
+.cards-inner{max-width:1100px;margin:0 auto;padding:56px 32px}
+.cards-title{font-family:‘Cormorant Garamond’,serif;font-size:34px;font-weight:600;color:var(–plum);text-align:center;margin-bottom:6px}
+.cards-sub{font-size:13px;color:var(–text-soft);text-align:center;margin-bottom:40px;font-weight:300}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+
+.mem-card{background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(61,36,89,0.1);border:1px solid rgba(61,36,89,0.08);transition:transform 0.2s,box-shadow 0.2s}
+.mem-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(61,36,89,0.15)}
+.mem-card-img{width:100%;height:200px;object-fit:cover}
+.mem-card-placeholder{width:100%;height:200px;background:var(–plum-pale);display:flex;align-items:center;justify-content:center;font-size:72px}
+.mem-card-body{padding:20px}
+.mem-card-name{font-family:‘Cormorant Garamond’,serif;font-size:26px;font-weight:600;color:var(–plum);margin-bottom:4px}
+.mem-card-years{font-size:11px;color:var(–gold);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
+.mem-card-quote{font-family:‘Cormorant Garamond’,serif;font-size:16px;font-style:italic;color:var(–plum-light);line-height:1.5;margin-bottom:10px;border-left:3px solid var(–gold);padding-left:12px}
+.mem-card-desc{font-size:12px;font-weight:300;color:var(–text-soft);line-height:1.6}
+.mem-card-footer{padding:12px 20px;background:var(–mustard);display:flex;align-items:center;gap:8px}
+.mem-card-owner{font-size:11px;color:var(–text-mid)}
+
+/* ── QUOTE ── */
+.quote-wrap{background-color:#b8902a!important;padding:44px 32px;text-align:center}
+.quote-text{font-family:‘Cormorant Garamond’,serif;font-size:clamp(18px,3vw,26px);font-style:italic;color:#ffffff;max-width:600px;margin:0 auto;line-height:1.5}
+.quote-author{font-size:12px;color:rgba(255,255,255,0.75);margin-top:12px;letter-spacing:0.12em;text-transform:uppercase}
+
+/* ── NAV BOTTOM ── */
+.bottom-nav{background-color:#3d2459!important;padding:40px 32px;text-align:center}
+.bottom-nav h3{font-family:‘Cormorant Garamond’,serif;font-size:22px;color:#ffffff;font-weight:300;font-style:italic;margin-bottom:24px}
+.bottom-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.bottom-link{display:inline-block;padding:12px 24px;border-radius:4px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s}
+.bottom-link.outline{border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.85)}
+.bottom-link.outline:hover{border-color:white;color:white;background:rgba(255,255,255,0.08)}
+.bottom-link.solid{background:#e8632a;color:#ffffff}
+.bottom-link.solid:hover{background:#c8512a}
+.bottom-link.teal{background:#2a7a7a;color:#ffffff}
+.bottom-link.teal:hover{background:#1a5a5a}
+
+/* ── FOOTER ── */
+.footer{background-color:#4e2f6e!important;padding:20px 32px;text-align:center}
+.footer p{font-size:12px;color:rgba(255,255,255,0.5)}
+.footer a{color:var(–gold-light);text-decoration:none}
+
+@media(max-width:600px){
+.cards-grid{grid-template-columns:1fr}
+.two-col{grid-template-columns:1fr}
+.navbar-links{gap:4px}
+.nav-link{font-size:11px;padding:6px 10px}
+}
+</style>
+
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-logo">
+    <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
+      <path d="M1 11 Q1 1 10 1 Q19 1 19 11" stroke="#e8632a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M4 11 Q4 4 10 4 Q16 4 16 11" stroke="#e8b84b" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M7 11 Q7 7 10 7 Q13 7 13 11" stroke="#9b59e8" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span><span class="r">Rainbow</span> Pet</span>
+  </a>
+  <div class="navbar-links">
+    <a href="index.html" class="nav-link">&#127968; Home</a>
+    <a href="proprietari.html" class="nav-link">&#128049; Proprietari</a>
+    <a href="veterinari.html" class="nav-link">&#128084; Veterinari</a>
+    <a href="giardino.html" class="nav-link active">&#127795; Il Giardino</a>
+    <a href="index.html#prenota" class="nav-link cta">Prenota un incontro</a>
+  </div>
+</nav>
+
+<div class="rainbow-line"></div>
+
+<!-- ── HEADER ── -->
+
+<div class="header">
+  <span class="header-icon">🍎</span>
+  <h1 class="header-title">Il <span class="accent">Giardino</span><br>dei Ricordi</h1>
+  <p class="header-sub">Un luogo dove i nostri animali continuano a vivere — nel ricordo, nelle parole, nell'amore che non finisce mai.</p>
+</div>
+
+<div class="rainbow-line"></div>
+
+<!-- ── INTRO ── -->
+
+<div style="background:#ffffff!important">
+  <div class="intro-wrap">
+    <div class="intro-title">🌈 Ogni amore merita di essere ricordato</div>
+    <p class="intro-text">
+      Questo spazio è dedicato a loro — al loro nome, alla loro storia,<br>
+      all'impronta indelebile che hanno lasciato nel nostro cuore.<br><br>
+      Condividi il ricordo del tuo animale: la sua foto, una frase che lo rappresenta,<br>
+      le parole che porti con te ogni giorno.<br><br>
+      <strong style="color:var(--plum)">L'amore non scompare. Resta, fiorisce, vive qui.</strong>
+    </p>
+  </div>
+</div>
+
+<!-- ── FORM ── -->
+
+<div class="form-wrap">
+  <div class="form-inner">
+    <div class="form-title">✨ Aggiungi il tuo ricordo</div>
+    <div class="form-sub">Compila il modulo — il tuo ricordo apparirà nel giardino qui sotto.</div>
+
+```
+<div id="memorial-form">
+
+  <div class="form-group">
+    <label class="form-label">Nome dell'animale *</label>
+    <input type="text" class="form-input" id="inp-nome" placeholder="Es. Luna, Artù, Pallino...">
+  </div>
+
+  <div class="two-col">
+    <div class="form-group">
+      <label class="form-label">Anno di nascita</label>
+      <input type="text" class="form-input" id="inp-nato" placeholder="Es. 2010">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Anno in cui ci ha lasciato</label>
+      <input type="text" class="form-input" id="inp-morto" placeholder="Es. 2024">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Tipo di animale</label>
+    <select class="form-select" id="inp-tipo">
+      <option value="&#128054;">&#128054; Cane</option>
+      <option value="&#128049;">&#128049; Gatto</option>
+      <option value="&#128048;">&#128048; Coniglio</option>
+      <option value="&#128038;">&#128038; Uccello</option>
+      <option value="&#128057;">&#128057; Criceto / Roditore</option>
+      <option value="&#128032;">&#128032; Pesce</option>
+      <option value="&#128062;">&#128062; Altro</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Foto (opzionale)</label>
+    <div class="upload-area" onclick="document.getElementById('inp-foto').click()">
+      <div class="upload-icon">&#128247;</div>
+      <div class="upload-text"><strong>Clicca per caricare una foto</strong><br>JPG o PNG &nbsp;&#183;&nbsp; Max 5MB</div>
+      <input type="file" id="inp-foto" accept="image/*" style="display:none" onchange="previewFoto(this)">
+      <img id="foto-preview" src="" alt="Anteprima foto">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Una frase per ricordarlo *</label>
+    <input type="text" class="form-input" id="inp-frase" placeholder="Es. Ci hai insegnato l'amore incondizionato.">
+    <div class="form-hint">Una frase breve che lo rappresenta, scritta con il cuore.</div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Raccontaci di lui / lei</label>
+    <textarea class="form-textarea" id="inp-desc" placeholder="Com'era, cosa amava fare, cosa ti manca di pi&#249;..."></textarea>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Il tuo nome</label>
+    <input type="text" class="form-input" id="inp-owner" placeholder="Es. La famiglia Rossi, oppure Giulia">
+  </div>
+
+  <button class="form-btn" onclick="aggiungiRicordo()">&#127795; Aggiungi al Giardino dei Ricordi</button>
+
+  <p class="form-note">
+    Il tuo ricordo verr&#224; aggiunto al giardino.
+    Per qualsiasi necessit&#224; scrivi a <a href="mailto:melaniastricchiolo@gmail.com" style="color:var(--plum)">melaniastricchiolo@gmail.com</a>
+  </p>
+</div>
+
+<div class="success-msg" id="success-msg">
+  <div style="font-size:48px;margin-bottom:12px">&#127795;</div>
+  <h3>Il ricordo &#232; nel Giardino.</h3>
+  <p>Il tuo animale &#232; ora parte del Giardino dei Ricordi Rainbow Pet.<br>L'amore non finisce. Resta, per sempre.</p>
+  <button class="form-btn" style="margin-top:20px;width:auto;padding:12px 28px" onclick="nuovoRicordo()">
+    + Aggiungi un altro ricordo
+  </button>
+</div>
+```
+
+  </div>
+</div>
+
+<!-- ── QUOTE ── -->
+
+<div class="quote-wrap">
+  <div class="quote-text">&#171;Le bestie sono le sole che non vi fanno del male, che meritano affetto, che ve lo restituiscono.&#187;</div>
+  <div class="quote-author">&#8212; Anna Magnani</div>
+</div>
+
+<!-- ── CARDS ── -->
+
+<div class="cards-wrap">
+  <div class="cards-inner">
+    <div class="cards-title">&#127795; Il Giardino</div>
+    <div class="cards-sub">Gli animali che vivono per sempre nei nostri cuori.</div>
+    <div class="cards-grid" id="cards-grid">
+
+```
+  <div class="mem-card">
+    <div class="mem-card-placeholder">&#128054;</div>
+    <div class="mem-card-body">
+      <div class="mem-card-name">Art&#249;</div>
+      <div class="mem-card-years">2010 &ndash; 2023 &nbsp;&#183;&nbsp; 13 anni insieme</div>
+      <div class="mem-card-quote">&#171;Ci hai insegnato che l'amore vero non chiede nulla in cambio.&#187;</div>
+      <div class="mem-card-desc">Un golden retriever dal cuore enorme. Amava correre in spiaggia e dormire ai piedi del letto.</div>
+    </div>
+    <div class="mem-card-footer">
+      <span>&#127795;</span>
+      <span class="mem-card-owner">Con amore, la famiglia Bianchi</span>
+    </div>
+  </div>
+
+  <div class="mem-card">
+    <div class="mem-card-placeholder" style="background:#f0e8ff">&#128049;</div>
+    <div class="mem-card-body">
+      <div class="mem-card-name">Luna</div>
+      <div class="mem-card-years">2015 &ndash; 2024 &nbsp;&#183;&nbsp; 9 anni insieme</div>
+      <div class="mem-card-quote">&#171;Piccola, silenziosa, indispensabile.&#187;</div>
+      <div class="mem-card-desc">Una gattina grigia e riservata che sceglieva con cura le persone da amare. E quando ti sceglieva, era per sempre.</div>
+    </div>
+    <div class="mem-card-footer">
+      <span>&#127795;</span>
+      <span class="mem-card-owner">Con amore, Marta</span>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+</div>
+
+<!-- ── NAVIGAZIONE BOTTOM ── -->
+
+<div class="bottom-nav">
+  <h3>Dove vuoi andare?</h3>
+  <div class="bottom-links">
+    <a href="index.html" class="bottom-link outline">&#127968; Home</a>
+    <a href="proprietari.html" class="bottom-link teal">&#128049; Sezione Proprietari</a>
+    <a href="veterinari.html" class="bottom-link outline">&#128084; Sezione Veterinari</a>
+    <a href="index.html#prenota" class="bottom-link solid">&#127795; Prenota un incontro</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+
+<div class="footer">
+  <p>&#169; 2025 Rainbow Pet &nbsp;&#183;&nbsp; Dott.ssa Melania Stricchiolo &nbsp;&#183;&nbsp;
+  <a href="mailto:melaniastricchiolo@gmail.com">melaniastricchiolo@gmail.com</a> &nbsp;&#183;&nbsp;
+  <a href="index.html">Torna al sito</a></p>
+</div>
+
+<script>
+function previewFoto(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const p = document.getElementById('foto-preview');
+      p.src = e.target.result;
+      p.style.display = 'block';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function aggiungiRicordo() {
+  const nome  = document.getElementById('inp-nome').value.trim();
+  const frase = document.getElementById('inp-frase').value.trim();
+  const nato  = document.getElementById('inp-nato').value.trim();
+  const morto = document.getElementById('inp-morto').value.trim();
+  const tipo  = document.getElementById('inp-tipo').value;
+  const desc  = document.getElementById('inp-desc').value.trim();
+  const owner = document.getElementById('inp-owner').value.trim();
+  const fotoEl = document.getElementById('foto-preview');
+  const hasFoto = fotoEl.style.display !== 'none' && fotoEl.src;
+
+  if (!nome)  { alert('Per favore inserisci il nome del tuo animale.'); return; }
+  if (!frase) { alert('Per favore inserisci una frase per ricordarlo.'); return; }
+
+  let anniTxt = '';
+  if (nato || morto) {
+    anniTxt = (nato||'?') + ' – ' + (morto||'?');
+    if (nato && morto) {
+      const d = parseInt(morto) - parseInt(nato);
+      if (!isNaN(d) && d > 0) anniTxt += ' · ' + d + ' ann' + (d===1?'o':'i') + ' insieme';
+    }
+  }
+
+  const card = document.createElement('div');
+  card.className = 'mem-card';
+  card.innerHTML = `
+    ${hasFoto
+      ? `<img class="mem-card-img" src="${fotoEl.src}" alt="${nome}">`
+      : `<div class="mem-card-placeholder">${tipo}</div>`}
+    <div class="mem-card-body">
+      <div class="mem-card-name">${nome}</div>
+      ${anniTxt ? `<div class="mem-card-years">${anniTxt}</div>` : ''}
+      <div class="mem-card-quote">«${frase}»</div>
+      ${desc ? `<div class="mem-card-desc">${desc}</div>` : ''}
+    </div>
+    <div class="mem-card-footer">
+      <span>&#127795;</span>
+      <span class="mem-card-owner">${owner ? 'Con amore, '+owner : 'Con amore ♥'}</span>
+    </div>`;
+
+  const grid = document.getElementById('cards-grid');
+  grid.insertBefore(card, grid.firstChild);
+  setTimeout(() => card.scrollIntoView({behavior:'smooth',block:'center'}), 400);
+
+  document.getElementById('memorial-form').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+}
+
+function nuovoRicordo() {
+  ['inp-nome','inp-nato','inp-morto','inp-frase','inp-desc','inp-owner']
+    .forEach(id => document.getElementById(id).value = '');
+  const p = document.getElementById('foto-preview');
+  p.style.display = 'none'; p.src = '';
+  document.getElementById('memorial-form').style.display = 'block';
+  document.getElementById('success-msg').style.display = 'none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
